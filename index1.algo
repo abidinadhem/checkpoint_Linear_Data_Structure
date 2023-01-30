@@ -1,0 +1,16 @@
+ALGORITHM overlapping
+VAR
+    setA:ARRAY_OF INTEGER[]
+    setB:ARRAY_OF INTEGER[]
+    i,j,sum:INTEGER:=0
+BEGIN
+    setA :={1,2,3,4,5};
+    setB :={3,4,5,6,7};
+    FOR i FROM 0 TO setA.length STEP step  DO
+        FOR j FROM 0 TO setB.length STEP step  DO
+            IF (setA[i]==setB[j]) THEN
+                sum:=sum+setA[i]
+            END_IF
+        END_FOR
+    END_FOR
+END
